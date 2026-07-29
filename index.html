@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subramani Rao — Cybersecurity &amp; Cyber Resilience Leader</title>
+<meta name="description" content="Subramani Rao — Senior Manager, Cybersecurity Solutions Strategy at Acronis. Author, speaker, and cybersecurity thought leader.">
+<style>
+  :root{
+    --bg:#0b1220;
+    --bg-alt:#111a2c;
+    --card:#141f36;
+    --border:#233152;
+    --text:#e8edf7;
+    --text-dim:#a7b3c9;
+    --accent:#5eb3ff;
+    --accent-2:#7ee8c1;
+    --radius:14px;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    padding:96px 24px 64px;
+    background:
+      radial-gradient(600px 300px at 20% -10%, rgba(94,179,255,0.18), transparent 60%),
+      radial-gradient(500px 260px at 90% 0%, rgba(126,232,193,0.14), transparent 60%),
+      var(--bg);
+    border-bottom:1px solid var(--border);
+    text-align:center;
+  }
+  .hero .tag{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+    background:rgba(126,232,193,0.08);
+    border:1px solid rgba(126,232,193,0.25);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(32px,5vw,48px);
+    margin:0 0 10px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+  }
+  .hero .role{
+    font-size:19px;
+    color:var(--text-dim);
+    margin:0 0 28px;
+  }
+  .hero .links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+  }
+  .btn{
+    padding:10px 20px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    color:var(--text);
+    font-size:14px;
+    transition:.15s;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#04101f;font-weight:600;}
+  .btn.primary:hover{background:#7cc1ff;color:#04101f;}
+
+  main{padding:64px 0 40px;}
+  section{margin-bottom:64px;}
+  section h2{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--accent-2);
+    margin:0 0 24px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  section h2::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:var(--border);
+  }
+  .about p{color:var(--text-dim);font-size:16px;max-width:72ch;}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:22px 24px;
+  }
+
+  .timeline{display:flex;flex-direction:column;gap:0;}
+  .timeline-item{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:20px;
+    padding:20px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .timeline-item:last-child{border-bottom:none;}
+  .timeline-item .period{color:var(--text-dim);font-size:14px;white-space:nowrap;}
+  .timeline-item .role{font-weight:600;font-size:16px;margin:0 0 4px;}
+  .timeline-item .org{color:var(--text-dim);font-size:14px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:16px;
+  }
+  .item-title{font-weight:600;font-size:15.5px;margin:0 0 6px;}
+  .item-sub{color:var(--text-dim);font-size:14px;margin:0 0 12px;}
+  .item-links{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;}
+  .item-links a{
+    border:1px solid var(--border);
+    padding:4px 10px;
+    border-radius:6px;
+  }
+  .item-links a:hover{text-decoration:none;border-color:var(--accent);}
+
+  .award-card{
+    background:linear-gradient(135deg, rgba(94,179,255,0.10), rgba(126,232,193,0.06));
+    border:1px solid rgba(94,179,255,0.3);
+  }
+  .award-card .item-title{font-size:18px;}
+
+  .edu-item{padding:16px 0;border-bottom:1px solid var(--border);}
+  .edu-item:last-child{border-bottom:none;}
+
+  footer{
+    border-top:1px solid var(--border);
+    padding:40px 24px 60px;
+    text-align:center;
+    color:var(--text-dim);
+    font-size:14px;
+  }
+  footer a{color:var(--text-dim);}
+
+  @media (max-width:600px){
+    .timeline-item{grid-template-columns:1fr;gap:4px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">Cybersecurity &amp; Cyber Resilience</span>
+    <h1>Subramani Rao</h1>
+    <p class="role">Senior Manager, Cybersecurity Solutions Strategy at Acronis</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:ratnadeepika89@gmail.com">Contact</a>
+      <a class="btn" href="https://www.linkedin.com/in/raos/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=5D9XCkkAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="about">
+    <h2>About</h2>
+    <p>
+      Subramani Rao is a cybersecurity and product marketing leader specializing in go-to-market strategy,
+      product positioning, and driving adoption for cutting-edge security and cyber resilience solutions.
+      He focuses on bridging cybersecurity and data protection to help organizations stay resilient against
+      evolving threats, with particular depth in ransomware resilience and operational technology (OT) security.
+      He is the author of two books on AI and cybersecurity, a CISSP-certified security professional, and a
+      recognized voice in industry press and at international conferences.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recognition</h2>
+    <div class="card award-card">
+      <p class="item-title">GTIA UK &amp; Ireland Cybersecurity Leadership Award — 2026</p>
+      <p class="item-sub">Sole recipient. Awarded by the Global Technology Industry Association (GTIA) for commitment and impact in strengthening cybersecurity resilience across the IT channel.</p>
+      <div class="item-links">
+        <a href="https://gtia.org/press-releases/2026-uk-ireland-spotlight-award-winners" target="_blank" rel="noopener">GTIA Press Release</a>
+        <a href="https://technologyreseller.uk/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">Technology Reseller</a>
+        <a href="https://www.intelligenttechchannels.com/2026/07/07/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">Intelligent Tech Channels</a>
+        <a href="https://www.mspshow.co.uk/msp-show/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">MSP Show</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="card timeline">
+      <div class="timeline-item">
+        <div class="period">Jan 2025 — Present</div>
+        <div>
+          <p class="role">Senior Manager, Cybersecurity Solutions Strategy</p>
+          <p class="org">Acronis</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">Apr 2024 — Jan 2025</div>
+        <div>
+          <p class="role">Solutions Consultant 2</p>
+          <p class="org">Palo Alto Networks</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">Aug 2022 — Jan 2023</div>
+        <div>
+          <p class="role">Senior Product Marketing Manager</p>
+          <p class="org">Cloudflare</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">2020 — 2022</div>
+        <div>
+          <p class="role">Fortinet</p>
+          <p class="org">&nbsp;</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="period">2012 — 2019</div>
+        <div>
+          <p class="role">F5 Networks</p>
+          <p class="org">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Books</h2>
+    <div class="grid">
+      <div class="card">
+        <p class="item-title">AI &amp; Cybersecurity Essentials: Your Digital Age Handbook</p>
+        <p class="item-sub">Author</p>
+        <div class="item-links">
+          <a href="https://www.waterstones.com/book/ai-and-cybersecurity-essentials/subramani-rao/9798316214327" target="_blank" rel="noopener">Waterstones</a>
+          <a href="https://www.walmart.com/ip/AI-amp-Cybersecurity-Essentials-Your-Digital-Age-Handbook-Paperback-9798316214327/15927852680" target="_blank" rel="noopener">Walmart</a>
+          <a href="https://www.abebooks.co.uk/9798316214327/Cybersecurity-Essentials-Digital-Age-Handbook/plp" target="_blank" rel="noopener">AbeBooks</a>
+        </div>
+      </div>
+      <div class="card">
+        <p class="item-title">AI &amp; Cybersecurity — Humanity's Portal to the Infinite</p>
+        <p class="item-sub">Author</p>
+        <div class="item-links">
+          <a href="https://www.amazon.co.uk/AI-Cybersecurity-Humanitys-Portal-Infinite/dp/B0G4JL4C9B" target="_blank" rel="noopener">Amazon</a>
+          <a href="https://www.abebooks.com/products/isbn/9798280001985" target="_blank" rel="noopener">AbeBooks</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card">
+        <p class="item-title">Certified Information Systems Security Professional (CISSP)</p>
+        <p class="item-sub">ISC2</p>
+        <div class="item-links">
+          <a href="https://www.credly.com/badges/b5fed63d-01b6-47ea-83e2-041d1f466e6a/public_url" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </div>
+      <div class="card">
+        <p class="item-title">Certified in Cybersecurity (CC)</p>
+        <p class="item-sub">ISC2</p>
+        <div class="item-links">
+          <a href="https://www.credly.com/badges/69aac465-3988-4d1d-a0b4-02b6bd94e27b/linked_in_profile" target="_blank" rel="noopener">Verify credential</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications &amp; Media</h2>
+    <div class="grid">
+      <div class="card">
+        <p class="item-title">SANS Whitepaper: DDoS Attacks and Mitigation</p>
+        <p class="item-sub">SANS Institute</p>
+        <div class="item-links"><a href="https://www.sans.org/white-papers/33764" target="_blank" rel="noopener">Read</a></div>
+      </div>
+      <div class="card">
+        <p class="item-title">Why Your Backups Might Not Save You When Ransomware Hits</p>
+        <p class="item-sub">The Hacker News — Expert Insights</p>
+        <div class="item-links"><a href="https://thehackernews.com/expert-insights/2026/04/why-your-backups-might-not-save-you.html" target="_blank" rel="noopener">Read</a></div>
+      </div>
+      <div class="card">
+        <p class="item-title">How to Test Ransomware Recovery Without Reinfecting Your Environment</p>
+        <p class="item-sub">The Hacker News — Expert Insights</p>
+        <div class="item-links"><a href="https://thehackernews.com/expert-insights/2026/05/how-to-test-ransomware-recovery-without.html" target="_blank" rel="noopener">Read</a></div>
+      </div>
+      <div class="card">
+        <p class="item-title">Why Ransomware Attacks Succeed Even When Backups Exist</p>
+        <p class="item-sub">Bleeping Computer</p>
+        <div class="item-links"><a href="https://www.bleepingcomputer.com/news/security/why-ransomware-attacks-succeed-even-when-backups-exist/" target="_blank" rel="noopener">Read</a></div>
+      </div>
+      <div class="card">
+        <p class="item-title">From Cybersecurity to Cyber Resilience: Why MSPs Must Think Bigger In 2026</p>
+        <p class="item-sub">CRN</p>
+        <div class="item-links"><a href="https://www.crn.com/news/channel-news/2025/from-cybersecurity-to-cyber-resilience-why-msps-must-think-bigger-in-2026" target="_blank" rel="noopener">Read</a></div>
+      </div>
+      <div class="card">
+        <p class="item-title">Author Profile &amp; Cybersecurity Blogs</p>
+        <p class="item-sub">Acronis</p>
+        <div class="item-links"><a href="https://www.acronis.com/en/blog/authors/subramani-rao/" target="_blank" rel="noopener">View profile</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Speaking</h2>
+    <div class="grid">
+      <div class="card">
+        <p class="item-title">The OT Resilience Blueprint — Protecting Industrial Operations from Cyberattacks and Downtime</p>
+        <p class="item-sub">Infosecurity Europe, London</p>
+        <div class="item-links"><a href="https://www.infosecurityeurope.com/en-gb/conference-programme/session-details.4886.263759.The%2BOT%2BResilience%2BBlueprint%2B-%2BProtecting%2BIndustrial%2BOperations%2Bfrom%2BCyberattacks%2Band%2BDowntime.html" target="_blank" rel="noopener">Session details</a></div>
+      </div>
+      <div class="card">
+        <p class="item-title">Building Operational Technology (OT) Cyber Resilience in an Evolving Regulatory Environment</p>
+        <p class="item-sub">Hannover Messe</p>
+        <div class="item-links"><a href="https://www.hannovermesse.de/event/building-operational-technology-ot-cyber-resilience-in-an-evolving-regulatory-environment/vor/103773" target="_blank" rel="noopener">Event details</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <div class="edu-item">
+        <p class="item-title">MSc, Computer Security — with Distinction</p>
+        <p class="item-sub">University of Essex</p>
+      </div>
+      <div class="edu-item">
+        <p class="item-title">Executive MBA — First Class</p>
+        <p class="item-sub">London Business School</p>
+      </div>
+      <div class="edu-item">
+        <p class="item-title">Bachelor of Engineering, Electronics &amp; Communication</p>
+        <p class="item-sub">Anna University</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Subramani Rao — <a href="mailto:ratnadeepika89@gmail.com">ratnadeepika89@gmail.com</a> · <a href="https://www.linkedin.com/in/raos/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=5D9XCkkAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
+</footer>
+
+</body>
+</html>
