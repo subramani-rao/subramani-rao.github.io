@@ -3,250 +3,625 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subramani Rao — Cybersecurity &amp; Cyber Resilience Leader</title>
-<meta name="description" content="Subramani Rao — Senior Manager, Cybersecurity Solutions Strategy at Acronis. Author, speaker, and cybersecurity thought leader.">
+<title>Subramani Rao - Cybersecurity &amp; Cyber Resilience Leader</title>
+<meta name="description" content="Subramani Rao - Cybersecurity and cyber resilience leader who has delivered critical security projects for British Telecom, Sky, Vodafone, and leading banks and retailers worldwide. Author, speaker, and VC technology advisor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0b1220;
-    --bg-alt:#111a2c;
-    --card:#141f36;
-    --border:#233152;
-    --text:#e8edf7;
-    --text-dim:#a7b3c9;
-    --accent:#5eb3ff;
-    --accent-2:#7ee8c1;
-    --radius:14px;
-    --maxw:920px;
+    --bg:#fdf7ec;
+    --surface:#fffdf8;
+    --card:#ffffff;
+    --border:#efe4cd;
+    --ink:#181410;
+    --ink-dim:#665f4d;
+    --accent:#ff5a36;
+    --accent-dark:#e2451f;
+    --accent-tint:#ffe6dc;
+    --accent-2:#1f6f5c;
+    --accent2-tint:#e2f0ea;
+    --yellow:#ffd35c;
+    --yellow-soft:#fff3d0;
+    --yellow-border:#f3dd9a;
+    --font-head:'Sora',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --font-body:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --radius:20px;
+    --maxw:1080px;
+    --shadow-sm:0 6px 16px rgba(24,20,16,0.06);
+    --shadow-md:0 16px 34px rgba(24,20,16,0.10);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;
+    background:
+      radial-gradient(circle, rgba(24,20,16,0.05) 1px, transparent 1.3px) 0 0/22px 22px,
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.65;
   }
-  a{color:var(--accent);text-decoration:none;}
+  h1,h2,h3,.item-title,.role,nav.topnav .brand-name,.card-title{font-family:var(--font-head);}
+  a{color:var(--accent-dark);text-decoration:none;}
   a:hover{text-decoration:underline;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  ::selection{background:var(--yellow);color:var(--ink);}
 
-  header.hero{
-    padding:96px 24px 64px;
-    background:
-      radial-gradient(600px 300px at 20% -10%, rgba(94,179,255,0.18), transparent 60%),
-      radial-gradient(500px 260px at 90% 0%, rgba(126,232,193,0.14), transparent 60%),
-      var(--bg);
+  .mark{background:linear-gradient(transparent 62%, var(--yellow) 62%);padding:0 2px;}
+
+  /* NAV */
+  nav.topnav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(253,247,236,0.86);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
-    text-align:center;
   }
-  .hero .tag{
-    display:inline-block;
-    font-size:13px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--accent-2);
-    background:rgba(126,232,193,0.08);
-    border:1px solid rgba(126,232,193,0.25);
-    padding:6px 14px;
+  nav.topnav .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:72px;
+    gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .brand:hover{text-decoration:none;}
+  .brand-avatar{
+    width:36px;height:36px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--yellow));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:13px;font-family:var(--font-head);
+    box-shadow:var(--shadow-sm);
+  }
+  .brand-name{font-weight:700;color:var(--ink);font-size:15.5px;}
+  nav.topnav .tabs{
+    list-style:none;
+    display:flex;
+    gap:2px;
+    margin:0;
+    padding:5px;
+    background:var(--surface);
+    border:1px solid var(--border);
     border-radius:999px;
-    margin-bottom:20px;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  nav.topnav .tabs::-webkit-scrollbar{display:none;}
+  nav.topnav a.navlink{
+    color:var(--ink-dim);
+    font-size:13.5px;
+    font-weight:600;
+    white-space:nowrap;
+    padding:9px 15px;
+    border-radius:999px;
+    display:block;
+  }
+  nav.topnav a.navlink:hover{color:var(--ink);text-decoration:none;background:var(--accent-tint);}
+
+  /* HERO */
+  header.hero{
+    padding:76px 24px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    align-items:center;
+    gap:40px;
+  }
+  .hero .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:700;
+    color:var(--accent-dark);
+    background:var(--accent-tint);
+    padding:7px 14px;
+    border-radius:999px;
+    margin:0 0 20px;
   }
   .hero h1{
-    font-size:clamp(32px,5vw,48px);
-    margin:0 0 10px;
-    font-weight:700;
+    font-size:clamp(34px,5.2vw,54px);
+    margin:0 0 18px;
+    font-weight:800;
     letter-spacing:-0.02em;
+    line-height:1.08;
   }
   .hero .role{
     font-size:19px;
-    color:var(--text-dim);
-    margin:0 0 28px;
+    color:var(--ink-dim);
+    margin:0 0 30px;
+    max-width:52ch;
   }
   .hero .links{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
-    justify-content:center;
   }
   .btn{
-    padding:10px 20px;
+    padding:13px 24px;
     border-radius:999px;
-    border:1px solid var(--border);
-    color:var(--text);
-    font-size:14px;
+    border:2px solid var(--ink);
+    color:var(--ink);
+    font-size:14.5px;
+    font-weight:700;
+    font-family:var(--font-head);
     transition:.15s;
+    background:var(--surface);
+    display:inline-block;
   }
-  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
-  .btn.primary{background:var(--accent);border-color:var(--accent);color:#04101f;font-weight:600;}
-  .btn.primary:hover{background:#7cc1ff;color:#04101f;}
+  .btn:hover{transform:translateY(-2px);text-decoration:none;box-shadow:var(--shadow-sm);}
+  .btn.primary{background:var(--ink);border-color:var(--ink);color:#fff;}
+  .btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff;}
 
-  main{padding:64px 0 40px;}
-  section{margin-bottom:64px;}
-  section h2{
+  .hero-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:28px;
+  }
+  .hero-badge{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:8px 14px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink-dim);
+    box-shadow:var(--shadow-sm);
+    display:inline-flex;align-items:center;gap:6px;
+  }
+
+  .hero-art{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px;}
+  .hero-blob{
+    position:absolute;
+    width:340px;height:340px;
+    background:linear-gradient(135deg,var(--accent),var(--yellow) 85%);
+    border-radius:42% 58% 65% 35% / 45% 45% 55% 55%;
+    animation:blobmove 9s ease-in-out infinite;
+    z-index:0;
+  }
+  @keyframes blobmove{
+    0%,100%{border-radius:42% 58% 65% 35% / 45% 45% 55% 55%;transform:rotate(0deg) scale(1);}
+    50%{border-radius:60% 40% 35% 65% / 55% 60% 40% 45%;transform:rotate(6deg) scale(1.03);}
+  }
+  .hero-photo{
+    position:relative;
+    z-index:1;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #fff;
+    box-shadow:var(--shadow-md);
+  }
+  .float-chip{
+    position:absolute;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:10px 14px;
+    font-size:12.5px;
+    font-weight:700;
+    box-shadow:var(--shadow-md);
+    z-index:2;
+    display:flex;align-items:center;gap:6px;
+  }
+  .float-chip.c1{top:10px;left:-4px;transform:rotate(-6deg);}
+  .float-chip.c2{bottom:26px;right:-14px;transform:rotate(5deg);}
+  .float-chip.c3{bottom:-6px;left:22%;transform:rotate(-3deg);}
+
+  main{padding:8px 0 40px;}
+  section{margin-bottom:80px;scroll-margin-top:90px;}
+  .eyebrow-label{
     font-size:13px;
     text-transform:uppercase;
-    letter-spacing:.1em;
+    letter-spacing:.12em;
     color:var(--accent-2);
-    margin:0 0 24px;
-    display:flex;
-    align-items:center;
-    gap:12px;
+    font-weight:800;
+    margin:0 0 10px;
   }
-  section h2::after{
-    content:"";
-    height:1px;
-    flex:1;
-    background:var(--border);
+  section h2.section-title{
+    font-size:clamp(24px,3.4vw,34px);
+    font-weight:800;
+    margin:0 0 28px;
+    letter-spacing:-0.01em;
   }
-  .about p{color:var(--text-dim);font-size:16px;max-width:72ch;}
 
+  /* ABOUT */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.8fr 1.2fr;
+    gap:44px;
+    align-items:center;
+  }
+  .about-photo-wrap{position:relative;}
+  .about-photo{
+    width:100%;
+    border-radius:var(--radius);
+    object-fit:cover;
+    aspect-ratio:4/5;
+    box-shadow:var(--shadow-md);
+    border:1px solid var(--border);
+  }
+  .about-photo-tag{
+    position:absolute;
+    bottom:-16px;
+    right:-16px;
+    background:var(--ink);
+    color:#fff;
+    padding:12px 18px;
+    border-radius:14px;
+    font-weight:700;
+    font-size:13.5px;
+    box-shadow:var(--shadow-md);
+    font-family:var(--font-head);
+  }
+  .about p{color:var(--ink-dim);font-size:16.5px;max-width:60ch;margin:0 0 18px;}
+  .about p:last-child{margin-bottom:0;}
+  .about strong{color:var(--ink);}
+  .client-strip{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0 4px;
+  }
+  .client-chip{
+    background:var(--accent2-tint);
+    color:var(--accent-2);
+    border:1px solid #cfe6db;
+    font-weight:700;
+    font-size:13.5px;
+    padding:7px 14px;
+    border-radius:999px;
+  }
+
+  /* WHAT I DO CARDS */
+  .grid4{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+  }
+  .service-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px 22px;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--accent);}
+  .service-icon{
+    width:48px;height:48px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;margin-bottom:14px;
+  }
+  .service-card:nth-child(1) .service-icon{background:var(--accent-tint);}
+  .service-card:nth-child(2) .service-icon{background:var(--yellow-soft);}
+  .service-card:nth-child(3) .service-icon{background:var(--accent2-tint);}
+  .service-card:nth-child(4) .service-icon{background:var(--accent-tint);}
+  .service-card h3{font-size:16.5px;margin:0 0 8px;font-weight:700;}
+  .service-card p{color:var(--ink-dim);font-size:14.5px;margin:0;}
+
+  /* CARDS GENERIC */
   .card{
     background:var(--card);
     border:1px solid var(--border);
     border-radius:var(--radius);
-    padding:22px 24px;
+    padding:24px 26px;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
   }
-
-  .timeline{display:flex;flex-direction:column;gap:0;}
-  .timeline-item{
-    display:grid;
-    grid-template-columns:150px 1fr;
-    gap:20px;
-    padding:20px 0;
-    border-bottom:1px solid var(--border);
+  .grid .card:hover{
+    transform:translateY(-3px);
+    border-color:var(--accent);
+    box-shadow:var(--shadow-md);
   }
-  .timeline-item:last-child{border-bottom:none;}
-  .timeline-item .period{color:var(--text-dim);font-size:14px;white-space:nowrap;}
-  .timeline-item .role{font-weight:600;font-size:16px;margin:0 0 4px;}
-  .timeline-item .org{color:var(--text-dim);font-size:14px;}
 
   .grid{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-    gap:16px;
+    gap:18px;
   }
-  .item-title{font-weight:600;font-size:15.5px;margin:0 0 6px;}
-  .item-sub{color:var(--text-dim);font-size:14px;margin:0 0 12px;}
+  .item-title{font-weight:700;font-size:15.5px;margin:0 0 6px;font-family:var(--font-head);}
+  .item-sub{color:var(--ink-dim);font-size:14px;margin:0 0 14px;}
   .item-links{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;}
   .item-links a{
     border:1px solid var(--border);
-    padding:4px 10px;
-    border-radius:6px;
+    padding:5px 12px;
+    border-radius:8px;
+    color:var(--ink);
+    font-weight:600;
   }
-  .item-links a:hover{text-decoration:none;border-color:var(--accent);}
+  .item-links a:hover{text-decoration:none;border-color:var(--accent);color:var(--accent-dark);background:var(--accent-tint);}
 
+  /* RECOGNITION */
   .award-card{
-    background:linear-gradient(135deg, rgba(94,179,255,0.10), rgba(126,232,193,0.06));
-    border:1px solid rgba(94,179,255,0.3);
+    background:linear-gradient(135deg,var(--yellow-soft),#fff 60%);
+    border:1px solid var(--yellow-border);
+    display:flex;
+    gap:22px;
+    align-items:flex-start;
+    padding:30px 30px;
   }
-  .award-card .item-title{font-size:18px;}
+  .award-trophy{
+    font-size:38px;
+    flex-shrink:0;
+    width:64px;height:64px;
+    border-radius:16px;
+    background:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-sm);
+  }
+  .award-card .item-title{font-size:19px;margin-bottom:8px;}
+  .award-card .item-sub{font-size:14.5px;max-width:70ch;}
 
-  .edu-item{padding:16px 0;border-bottom:1px solid var(--border);}
+  .book-cover{
+    width:100%;
+    aspect-ratio:2/3;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:16px;
+    border:1px solid var(--border);
+    background:var(--accent2-tint);
+    box-shadow:var(--shadow-sm);
+  }
+  .media-thumb{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:16px;
+    border:1px solid var(--border);
+    background:var(--accent2-tint);
+  }
+
+  .edu-item{padding:18px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px;}
   .edu-item:last-child{border-bottom:none;}
+  .edu-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:20px;
+  }
+  .gallery figure{
+    margin:0;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .gallery figure:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+  .gallery img{width:100%;height:210px;object-fit:cover;display:block;background:var(--accent2-tint);transition:transform .3s ease;}
+  .gallery figure:hover img{transform:scale(1.04);}
+  .gallery figcaption{padding:15px 17px;font-size:13.5px;color:var(--ink-dim);}
 
   footer{
-    border-top:1px solid var(--border);
-    padding:40px 24px 60px;
-    text-align:center;
-    color:var(--text-dim);
-    font-size:14px;
+    background:var(--ink);
+    color:#cfc9ba;
+    padding:56px 24px 32px;
+    margin-top:20px;
   }
-  footer a{color:var(--text-dim);}
+  footer .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:32px;
+    margin-bottom:36px;
+  }
+  footer h4{color:#fff;font-family:var(--font-head);font-size:14px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 16px;}
+  footer .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  footer .footer-brand .brand-name{color:#fff;font-size:17px;}
+  footer p{font-size:14px;line-height:1.7;max-width:38ch;}
+  footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+  footer a{color:#cfc9ba;font-size:14px;}
+  footer a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:24px;
+    font-size:13px;
+    color:#8f8977;
+    text-align:center;
+  }
 
+  @media (max-width:800px){
+    .hero .wrap{grid-template-columns:1fr;text-align:center;}
+    .hero .links{justify-content:center;}
+    .hero-badges{justify-content:center;}
+    .hero-art{order:-1;min-height:280px;}
+    .about-grid{grid-template-columns:1fr;}
+    .about p{max-width:none;}
+    footer .footer-grid{grid-template-columns:1fr;gap:28px;}
+  }
   @media (max-width:600px){
-    .timeline-item{grid-template-columns:1fr;gap:4px;}
+    .float-chip{display:none;}
   }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<nav class="topnav">
   <div class="wrap">
-    <span class="tag">Cybersecurity &amp; Cyber Resilience</span>
-    <h1>Subramani Rao</h1>
-    <p class="role">Senior Manager, Cybersecurity Solutions Strategy at Acronis</p>
-    <div class="links">
-      <a class="btn primary" href="mailto:ratnadeepika89@gmail.com">Contact</a>
-      <a class="btn" href="https://www.linkedin.com/in/raos/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://scholar.google.com/citations?user=5D9XCkkAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a class="brand" href="#top">
+      <span class="brand-avatar">SR</span>
+      <span class="brand-name">Subramani Rao</span>
+    </a>
+    <ul class="tabs">
+      <li><a class="navlink" href="#about">About</a></li>
+      <li><a class="navlink" href="#what-i-do">What I Do</a></li>
+      <li><a class="navlink" href="#recognition">Recognition</a></li>
+      <li><a class="navlink" href="#gallery">Gallery</a></li>
+      <li><a class="navlink" href="#books">Books</a></li>
+      <li><a class="navlink" href="#media">Media</a></li>
+      <li><a class="navlink" href="#speaking">Speaking</a></li>
+      <li><a class="navlink" href="#education">Education</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">👋 Hi, I'm Subramani</span>
+      <h1>Helping organizations stay resilient against evolving cyber threats.</h1>
+      <p class="role">Cybersecurity &amp; cyber resilience leader, published author, and award-winning voice on ransomware resilience and OT security - trusted by global vendors, blue-chip enterprises, and venture capital investors alike.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:ratnadeepika89@gmail.com">Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/raos/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=5D9XCkkAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge">🏆 GTIA Award Winner 2026</span>
+        <span class="hero-badge">📚 Author of 2 Books</span>
+        <span class="hero-badge">🔐 CISSP Certified</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-blob"></div>
+      <img class="hero-photo" src="profile.jpg" alt="Portrait of Subramani Rao">
+      <div class="float-chip c1">🛡️ Cyber Resilience</div>
+      <div class="float-chip c2">🏭 OT Security</div>
+      <div class="float-chip c3">💼 VC Advisory</div>
     </div>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="about">
-    <h2>About</h2>
-    <p>
-      Subramani Rao is a cybersecurity and product marketing leader specializing in go-to-market strategy,
-      product positioning, and driving adoption for cutting-edge security and cyber resilience solutions.
-      He focuses on bridging cybersecurity and data protection to help organizations stay resilient against
-      evolving threats, with particular depth in ransomware resilience and operational technology (OT) security.
-      He is the author of two books on AI and cybersecurity, a CISSP-certified security professional, and a
-      recognized voice in industry press and at international conferences.
-    </p>
+  <section class="about" id="about">
+    <p class="eyebrow-label">About</p>
+    <h2 class="section-title">Hey, I'm Subramani 👋</h2>
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <img class="about-photo" src="gallery/g7-gtia-stage.jpg" alt="Subramani Rao receiving the GTIA Cybersecurity Leadership Award">
+        <div class="about-photo-tag">GTIA Award, 2026</div>
+      </div>
+      <div>
+        <p>
+          I'm a cybersecurity and product marketing leader specializing in go-to-market strategy, product
+          positioning, and driving adoption for cutting-edge security and cyber resilience solutions. Over my
+          career I've worked across a number of leading cybersecurity and technology vendors, and led critical
+          cybersecurity projects for some of the world's best-known organizations.
+        </p>
+        <p>
+          My client work spans <strong>British Telecom, Sky, Vodafone</strong>, and several leading banks and
+          retail companies across the UK and worldwide - helping them strengthen resilience against
+          ransomware, secure operational technology (OT) environments, and stay ahead of evolving threats.
+        </p>
+        <div class="client-strip">
+          <span class="client-chip">British Telecom</span>
+          <span class="client-chip">Sky</span>
+          <span class="client-chip">Vodafone</span>
+          <span class="client-chip">Leading UK &amp; Global Banks</span>
+          <span class="client-chip">Retail Enterprises Worldwide</span>
+        </div>
+        <p>
+          Alongside my vendor and enterprise work, I also bring <strong>consulting experience advising venture
+          capital firms</strong> - providing cybersecurity and technology investment guidance to help investors
+          evaluate emerging security technologies and de-risk their portfolio decisions.
+        </p>
+        <p>
+          I'm the author of two books on AI and cybersecurity, a CISSP-certified security professional, and a
+          recognized voice in industry press and at international conferences.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Recognition</h2>
+  <section id="what-i-do">
+    <p class="eyebrow-label">What I Do</p>
+    <h2 class="section-title">How I can help</h2>
+    <div class="grid4">
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Cybersecurity Strategy &amp; GTM</h3>
+        <p>Go-to-market strategy and product positioning for security and cyber resilience solutions.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔐</div>
+        <h3>Ransomware &amp; Cyber Resilience</h3>
+        <p>Helping organizations build resilience and recover confidently when ransomware strikes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏭</div>
+        <h3>OT &amp; Industrial Security</h3>
+        <p>Securing operational technology environments amid an evolving regulatory landscape.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <h3>VC &amp; Tech Investment Advisory</h3>
+        <p>Cybersecurity and technology investment advice for venture capital firms evaluating deals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="recognition">
+    <p class="eyebrow-label">Recognition</p>
+    <h2 class="section-title">Awards</h2>
     <div class="card award-card">
-      <p class="item-title">GTIA UK &amp; Ireland Cybersecurity Leadership Award — 2026</p>
-      <p class="item-sub">Sole recipient. Awarded by the Global Technology Industry Association (GTIA) for commitment and impact in strengthening cybersecurity resilience across the IT channel.</p>
-      <div class="item-links">
-        <a href="https://gtia.org/press-releases/2026-uk-ireland-spotlight-award-winners" target="_blank" rel="noopener">GTIA Press Release</a>
-        <a href="https://technologyreseller.uk/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">Technology Reseller</a>
-        <a href="https://www.intelligenttechchannels.com/2026/07/07/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">Intelligent Tech Channels</a>
-        <a href="https://www.mspshow.co.uk/msp-show/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">MSP Show</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <div class="card timeline">
-      <div class="timeline-item">
-        <div class="period">Jan 2025 — Present</div>
-        <div>
-          <p class="role">Senior Manager, Cybersecurity Solutions Strategy</p>
-          <p class="org">Acronis</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="period">Apr 2024 — Jan 2025</div>
-        <div>
-          <p class="role">Solutions Consultant 2</p>
-          <p class="org">Palo Alto Networks</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="period">Aug 2022 — Jan 2023</div>
-        <div>
-          <p class="role">Senior Product Marketing Manager</p>
-          <p class="org">Cloudflare</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="period">2020 — 2022</div>
-        <div>
-          <p class="role">Fortinet</p>
-          <p class="org">&nbsp;</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="period">2012 — 2019</div>
-        <div>
-          <p class="role">F5 Networks</p>
-          <p class="org">&nbsp;</p>
+      <div class="award-trophy">🏆</div>
+      <div>
+        <p class="item-title">GTIA UK &amp; Ireland Cybersecurity Leadership Award -2026</p>
+        <p class="item-sub">Sole recipient. Awarded by the Global Technology Industry Association (GTIA) for commitment and impact in strengthening cybersecurity resilience across the IT channel.</p>
+        <div class="item-links">
+          <a href="https://gtia.org/press-releases/2026-uk-ireland-spotlight-award-winners" target="_blank" rel="noopener">GTIA Press Release</a>
+          <a href="https://technologyreseller.uk/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">Technology Reseller</a>
+          <a href="https://www.intelligenttechchannels.com/2026/07/07/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">Intelligent Tech Channels</a>
+          <a href="https://www.mspshow.co.uk/msp-show/gtia-announces-2026-uk-ireland-spotlight-awards-winners/" target="_blank" rel="noopener">MSP Show</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Books</h2>
+  <section id="gallery">
+    <p class="eyebrow-label">Gallery</p>
+    <h2 class="section-title">Moments along the way</h2>
+    <div class="gallery">
+      <figure>
+        <img src="gallery/g1-fortinet-nse7.jpg" alt="Fortinet NSE 7 certification">
+        <figcaption>Fortinet Network Security Expert (NSE 7) - Network Security Architect, certified January 2020.</figcaption>
+      </figure>
+      <figure>
+        <img src="gallery/g2-lbs-presenting.jpg" alt="Presenting at London Business School">
+        <figcaption>Presenting on competitive positioning during the Executive MBA programme at London Business School.</figcaption>
+      </figure>
+      <figure>
+        <img src="gallery/g3-lbs-team.jpg" alt="Team presentation at London Business School">
+        <figcaption>Team project presentation with fellow Executive MBA candidates, London Business School.</figcaption>
+      </figure>
+      <figure>
+        <img src="gallery/g4-acronis-mspglobal.jpg" alt="Speaking at Acronis Security Arena, MSP Global">
+        <figcaption>Speaking at the Acronis Security Arena, MSP Global - on cyber resilience and business continuity for MSPs.</figcaption>
+      </figure>
+      <figure>
+        <img src="gallery/g5-acronis-sko.jpg" alt="Presenting at Acronis Sales Kickoff 2026">
+        <figcaption>Presenting at Acronis' Sales Kickoff (SKO) Europe, Israel and Africa 2026 on customer retention strategy.</figcaption>
+      </figure>
+      <figure>
+        <img src="gallery/g6-acronis-event.jpg" alt="At an Acronis channel event">
+        <figcaption>With colleagues and partners at an Acronis channel event.</figcaption>
+      </figure>
+      <figure>
+        <img src="gallery/g7-gtia-stage.jpg" alt="Receiving the GTIA Spotlight Award">
+        <figcaption>Receiving the Cybersecurity Leadership Award at the GTIA UK &amp; Ireland Spotlight Awards, 2026.</figcaption>
+      </figure>
+      <figure>
+        <img src="gallery/g8-gtia-trophy.jpg" alt="GTIA Spotlight Award trophy">
+        <figcaption>GTIA Spotlight Awards 2026 - Cybersecurity Leadership Award.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="books">
+    <p class="eyebrow-label">Books</p>
+    <h2 class="section-title">Published works</h2>
     <div class="grid">
       <div class="card">
+        <img class="book-cover" src="https://cdn.waterstones.com/bookjackets/large/9798/3162/9798316214327.jpg" alt="Cover of AI & Cybersecurity Essentials: Your Digital Age Handbook">
         <p class="item-title">AI &amp; Cybersecurity Essentials: Your Digital Age Handbook</p>
         <p class="item-sub">Author</p>
         <div class="item-links">
@@ -256,7 +631,8 @@
         </div>
       </div>
       <div class="card">
-        <p class="item-title">AI &amp; Cybersecurity — Humanity's Portal to the Infinite</p>
+        <img class="book-cover" src="https://pictures.abebooks.com/isbn/9798280001985-us.jpg" alt="Cover of AI & Cybersecurity - Humanity's Portal to the Infinite">
+        <p class="item-title">AI &amp; Cybersecurity - Humanity's Portal to the Infinite</p>
         <p class="item-sub">Author</p>
         <div class="item-links">
           <a href="https://www.amazon.co.uk/AI-Cybersecurity-Humanitys-Portal-Infinite/dp/B0G4JL4C9B" target="_blank" rel="noopener">Amazon</a>
@@ -267,7 +643,8 @@
   </section>
 
   <section>
-    <h2>Certifications</h2>
+    <p class="eyebrow-label">Certifications</p>
+    <h2 class="section-title">Credentials</h2>
     <div class="grid">
       <div class="card">
         <p class="item-title">Certified Information Systems Security Professional (CISSP)</p>
@@ -286,8 +663,9 @@
     </div>
   </section>
 
-  <section>
-    <h2>Publications &amp; Media</h2>
+  <section id="media">
+    <p class="eyebrow-label">Publications &amp; Media</p>
+    <h2 class="section-title">In the press</h2>
     <div class="grid">
       <div class="card">
         <p class="item-title">SANS Whitepaper: DDoS Attacks and Mitigation</p>
@@ -296,12 +674,13 @@
       </div>
       <div class="card">
         <p class="item-title">Why Your Backups Might Not Save You When Ransomware Hits</p>
-        <p class="item-sub">The Hacker News — Expert Insights</p>
+        <p class="item-sub">The Hacker News - Expert Insights</p>
         <div class="item-links"><a href="https://thehackernews.com/expert-insights/2026/04/why-your-backups-might-not-save-you.html" target="_blank" rel="noopener">Read</a></div>
       </div>
       <div class="card">
+        <img class="media-thumb" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZhBe_N6EYujrFLez2r0HR3n9l3IcTkxEYqE-vvdI67NpShOz6kXUsdcYOvgmxRPVNoBCzWKQr4s637AAYIi6vXvDiXMs_tjnx0Yck3-NgxthUEACpabjGaxYpJM0LYcrLkOHERWBmyUvQFvO6-AXBJ0YAah1vxCr08FHuqFyu8HOGQuQXfXVQFPW5vSg/s1700-e365/acronis-main.jpg" alt="How to Test Ransomware Recovery Without Reinfecting Your Environment">
         <p class="item-title">How to Test Ransomware Recovery Without Reinfecting Your Environment</p>
-        <p class="item-sub">The Hacker News — Expert Insights</p>
+        <p class="item-sub">The Hacker News - Expert Insights</p>
         <div class="item-links"><a href="https://thehackernews.com/expert-insights/2026/05/how-to-test-ransomware-recovery-without.html" target="_blank" rel="noopener">Read</a></div>
       </div>
       <div class="card">
@@ -322,11 +701,12 @@
     </div>
   </section>
 
-  <section>
-    <h2>Speaking</h2>
+  <section id="speaking">
+    <p class="eyebrow-label">Speaking</p>
+    <h2 class="section-title">On stage</h2>
     <div class="grid">
       <div class="card">
-        <p class="item-title">The OT Resilience Blueprint — Protecting Industrial Operations from Cyberattacks and Downtime</p>
+        <p class="item-title">The OT Resilience Blueprint - Protecting Industrial Operations from Cyberattacks and Downtime</p>
         <p class="item-sub">Infosecurity Europe, London</p>
         <div class="item-links"><a href="https://www.infosecurityeurope.com/en-gb/conference-programme/session-details.4886.263759.The%2BOT%2BResilience%2BBlueprint%2B-%2BProtecting%2BIndustrial%2BOperations%2Bfrom%2BCyberattacks%2Band%2BDowntime.html" target="_blank" rel="noopener">Session details</a></div>
       </div>
@@ -338,20 +718,30 @@
     </div>
   </section>
 
-  <section>
-    <h2>Education</h2>
+  <section id="education">
+    <p class="eyebrow-label">Education</p>
+    <h2 class="section-title">Academic background</h2>
     <div class="card">
       <div class="edu-item">
-        <p class="item-title">MSc, Computer Security — with Distinction</p>
-        <p class="item-sub">University of Essex</p>
+        <span class="edu-dot"></span>
+        <div>
+          <p class="item-title">MSc, Computer Security - with Distinction</p>
+          <p class="item-sub">University of Essex</p>
+        </div>
       </div>
       <div class="edu-item">
-        <p class="item-title">Executive MBA — First Class</p>
-        <p class="item-sub">London Business School</p>
+        <span class="edu-dot"></span>
+        <div>
+          <p class="item-title">Executive MBA - First Class</p>
+          <p class="item-sub">London Business School</p>
+        </div>
       </div>
       <div class="edu-item">
-        <p class="item-title">Bachelor of Engineering, Electronics &amp; Communication</p>
-        <p class="item-sub">Anna University</p>
+        <span class="edu-dot"></span>
+        <div>
+          <p class="item-title">Bachelor of Engineering, Electronics &amp; Communication</p>
+          <p class="item-sub">Anna University</p>
+        </div>
       </div>
     </div>
   </section>
@@ -359,7 +749,38 @@
 </main>
 
 <footer>
-  <p>Subramani Rao — <a href="mailto:ratnadeepika89@gmail.com">ratnadeepika89@gmail.com</a> · <a href="https://www.linkedin.com/in/raos/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=5D9XCkkAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-avatar">SR</span>
+          <span class="brand-name">Subramani Rao</span>
+        </div>
+        <p>Cybersecurity and cyber resilience leader delivering critical security projects for global enterprises, and technology investment advisory for venture capital firms.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#what-i-do">What I Do</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#books">Books</a></li>
+          <li><a href="#media">Media</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:ratnadeepika89@gmail.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/raos/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/citations?user=5D9XCkkAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Subramani Rao. All rights reserved.
+    </div>
+  </div>
 </footer>
 
 </body>
