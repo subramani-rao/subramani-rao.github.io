@@ -9,3 +9,8 @@ Upload every file and folder in this package to the root of the GitHub repositor
 Hero → Experience across → About Subramani Rao → How I Help Organisations → Recognition → Speaking → Career Journey → Books & Research → Media & Interviews → Contact.
 
 The numerical metrics block has been removed. Resources remains the only separate content page.
+
+
+## Calendly
+
+Calendly popup integration is configured for `https://calendly.com/subramanirao/` in the navigation, hero and final contact section. If the Calendly script is blocked, each button falls back to opening the Calendly page directly.
